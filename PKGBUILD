@@ -17,7 +17,7 @@ makedepends=("$_linuxprefix-headers")
 provides=("zfs=${pkgver}")
 install=zfs.install
 source=("https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/zfs-${pkgver}.tar.gz"{,.asc})
-sha256sums=(SKIP)
+sha256sums=(SKIP SKIP SKIP)
             'SKIP')
 
 
