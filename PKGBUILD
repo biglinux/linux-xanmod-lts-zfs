@@ -5,7 +5,7 @@ _linuxprefix=linux-xanmod-lts
 _extramodules=$(find /usr/lib/modules -type d -iname 6.1.24*xanmod* | rev | cut -d "/" -f1 | rev)
 
 pkgname="$_linuxprefix-zfs"
-pkgver=2.1.9
+pkgver=2.1.11
 pkgrel=61241
 pkgdesc='Kernel modules for the Zettabyte File System.'
 arch=('x86_64')
@@ -16,11 +16,9 @@ depends=("$_linuxprefix" "kmod" "zfs-utils=${pkgver}")
 makedepends=("$_linuxprefix-headers")
 provides=("zfs=${pkgver}")
 install=zfs.install
-source=("https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/zfs-${pkgver}.tar.gz"{,.asc}
-        'https://github.com/andrewc12/openzfs/commit/68b1eba.patch')
-sha256sums=('6b172cdf2eb54e17fcd68f900fab33c1430c5c59848fa46fab83614922fe50f6'
-            'SKIP'
-            '2b6996a310893d63f79fa32f8be2bd54f0cbe2a17c993c32c461cd04d1e81ae8')
+source=("https://github.com/zfsonlinux/zfs/releases/download/zfs-${pkgver}/zfs-${pkgver}.tar.gz"{,.asc})
+sha256sums=('a54fe4e854d0a207584f1799a80e165eae66bc30dc8e8c96a1f99ed9d4d8ceb2'
+            'SKIP')
 validpgpkeys=('4F3BA9AB6D1F8D683DC2DFB56AD860EED4598027'  # Tony Hutter (GPG key for signing ZFS releases) <hutter2@llnl.gov>
               'C33DF142657ED1F7C328A2960AB9E991C6AF658B') # Brian Behlendorf <behlendorf1@llnl.gov>
 
