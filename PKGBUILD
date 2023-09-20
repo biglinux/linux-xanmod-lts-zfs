@@ -2,11 +2,11 @@
 # Maintainer: Philip Müller <philm[at]manjaro[dot]org>
 
 _linuxprefix=linux-xanmod-lts
-_extramodules=$(find /usr/lib/modules -type d -iname 6.1.53*xanmod* | rev | cut -d "/" -f1 | rev)
+_extramodules=$(find /usr/lib/modules -type d -iname 6.1.54*xanmod* | rev | cut -d "/" -f1 | rev)
 
 pkgname="$_linuxprefix-zfs"
 pkgver=2.1.12
-pkgrel=61531
+pkgrel=61541
 pkgdesc='Kernel modules for the Zettabyte File System.'
 arch=('x86_64')
 url="http://zfsonlinux.org/"
@@ -30,7 +30,7 @@ prepare() {
 }
 
 build() {
-    _kernver=$(find /usr/lib/modules -type d -iname 6.1.53*xanmod* | rev | cut -d "/" -f1 | rev)
+    _kernver=$(find /usr/lib/modules -type d -iname 6.1.54*xanmod* | rev | cut -d "/" -f1 | rev)
 
     cd "zfs-${pkgver}"
     ./configure --prefix=/usr --sysconfdir=/etc --sbindir=/usr/bin --libdir=/usr/lib \
