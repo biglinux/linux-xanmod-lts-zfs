@@ -5,7 +5,7 @@ _linuxprefix=linux-xanmod-lts
 _extramodules=$(find /usr/lib/modules -type d -iname 6.1.64*xanmod* | rev | cut -d "/" -f1 | rev)
 
 pkgname="$_linuxprefix-zfs"
-pkgver=2.2.0
+pkgver=2.2.1
 pkgrel=61641
 pkgdesc='Kernel modules for the Zettabyte File System.'
 arch=('x86_64')
