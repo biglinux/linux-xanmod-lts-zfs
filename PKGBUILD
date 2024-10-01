@@ -4,7 +4,7 @@
 _linuxprefix=linux-xanmod-lts
 
 pkgname="${_linuxprefix}-zfs"
-pkgver=2.2.5
+pkgver=2.2.6
 pkgrel=66531
 pkgdesc='Kernel modules for the Zettabyte File System.'
 arch=('x86_64')
